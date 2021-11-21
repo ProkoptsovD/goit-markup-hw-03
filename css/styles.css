@@ -1,0 +1,240 @@
+/* Цвет кнопок первичный #2196F3 */
+/* Цвет заголовков #212121 */
+/* Цвет текста в абзацах #757575  */
+/* Цвет текста белый #ffffff */
+/* цвет ссылок в футере rgba(255,255,255, .6) */
+
+/* Оформление элементов с обзим дизайном */
+:root {
+  --primary-color: #2196f3;
+  --headings-color: #212121;
+  --primary-text-color: #757575;
+  --secondary-text-color: #ffffff;
+  --footer-links-color: rgba(255, 255, 255, 0.6);
+  --footer-bcg-color: #2f303a;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+
+  background-color: var(--secondary-text-color);
+  color: var(--primary-text-color);
+}
+
+/* убирает стили у всех списков */
+.list {
+  list-style: none;
+}
+
+/* Оформление логотипа */
+
+.logo-first {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+
+  color: var(--primary-color);
+}
+
+.logo-second {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+
+  color: #000000;
+}
+
+.logo-third {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+
+  color: #ffffff;
+}
+
+/* ОФормление навигации */
+
+.nav .nav-links {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  color: var(--headings-color);
+}
+
+.nav .nav-links:hover,
+.nav .nav-links:focus {
+  color: var(--primary-color);
+  border: none;
+}
+
+.nav .nav-links.current {
+  color: #2196f3;
+}
+
+/* Оформление ссылок в секции контактов */
+
+.auth .auth-nav {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  color: var(--primary-text-color);
+}
+
+.auth .auth-nav:hover,
+.auth .auth-nav:focus {
+  color: var(--primary-color);
+}
+
+/* Оформляем Hero */
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  background-color: #757575;
+  color: var(--secondary-text-color);
+}
+
+/* оформление секций */
+
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  color: var(--headings-color);
+}
+
+.advantagies-list .title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--headings-color);
+}
+
+.advantagies-list .title {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.team-list .title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+
+  color: var(--headings-color);
+}
+
+.team-list .text {
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+/* Оформление адреса в футуре  */
+
+.footer-bcg {
+  background-color: var(--footer-bcg-color);
+}
+
+.footer-info .link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  text-decoration: none;
+
+  color: var(--primary-text-color);
+}
+
+.footer-info .link:hover,
+.footer-info .link:focus {
+  background-color: var(--primary-color);
+  color: var(--secondary-text-color);
+}
+
+.footer-info .geo-link {
+  font-size: 14px;
+  line-height: 1.71;
+  text-decoration: none;
+
+  color: var(--secondary-text-color);
+}
+
+/* Оформление кнопки для Hero*/
+
+.hero .button {
+  font-family: inherit;
+  color: var(--secondary-text-color);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  border: none;
+}
+
+/* Оформление страницы Portfolio */
+
+/* Офорляем секции в main */
+
+.projects .example {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: var(--headings-color);
+}
+
+.projects .link {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+.projects .text {
+  font-size: 16px;
+  line-height: 1.87;
+}
+
+/* оформление кнопок в main страницы Portfolio */
+
+.submenu .submenu-button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--headings-color);
+  background-color: #f5f4fa;
+  border: none;
+}
+
+.submenu .submenu-button:hover,
+.submenu .submenu-button:focus {
+  color: var(--secondary-text-color);
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+}
+
+.submenu .submenu-button.current {
+  color: var(--secondary-text-color);
+  background-color: var(--primary-color);
+}
