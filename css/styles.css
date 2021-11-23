@@ -30,10 +30,16 @@ body {
   list-style: none;
 }
 
+/* нижний отступ для хедера в портфолио */
+.bottom-margin {
+  margin-bottom: 94px;
+}
+
 .container {
   width: 1200px;
   padding: 0 15px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 
   background-color: lightblue;
 }
