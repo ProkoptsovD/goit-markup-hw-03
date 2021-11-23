@@ -69,6 +69,10 @@ img {
 
 /* Оформление хедера */
 
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
 .page-header .container {
   display: flex;
   align-items: center;
@@ -362,7 +366,6 @@ img {
   margin-bottom: 20px;
 }
 
-
 .footer-info .geo-link {
   font-size: 14px;
   line-height: 1.71;
@@ -435,8 +438,8 @@ img {
 /* оформление кнопок в main страницы Portfolio */
 
 .submenu .submenu-button {
- padding: 6px 22px;
- min-width:73px;
+  padding: 6px 22px;
+  min-width: 73px;
 
   font-family: inherit;
   font-weight: 500;
@@ -447,7 +450,6 @@ img {
   border: transparent;
   border-radius: 4px;
   border-color: #f5f4fa;
-  
 
   color: var(--headings-color);
   background-color: #f5f4fa;
@@ -476,11 +478,11 @@ img {
   justify-content: center;
   align-items: center;
   padding-bottom: 50px;
-  
+
   /* background-color: magenta; */
 }
 
-.submenu .filter { 
+.submenu .filter {
   padding-right: 8px;
 }
 
@@ -488,18 +490,47 @@ img {
   padding-right: 0;
 }
 
-
-
 /* Сетка для портфолио с примерами работ */
 
 .projects {
   display: flex;
-  margin-top: var(-1 * (--cage-gaps));
-  margin-left: var(-1 * (--cage-gaps));
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+  padding: auto;
+
+  /* margin-top: var(-1 * (--cage-gaps));
+  margin-left: var(-1 * (--cage-gaps)); */
+  /* не работает почему-то */
+}
+
+.cards {
+  flex-basis: calc((100% - 90px) / 3);
+  margin-top: 30px;
+  margin-left: 30px;
+
+  /* flex-basis: calc(100% - var(3 * (--cage-gaps)) / 3);
+  margin-top: var(--cage-gaps);
+  margin-left: var(--cage-gaps); */
+  /* тоже не работает */
+}
+
+.description {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+}
+
+.description .text {
+  margin: 0;
   padding: 0;
 }
 
-.items {
-  flex-basis: calc((100% - var(--cage-gaps)) / 4);
-  margin-top: var(--cage-gaps);
-  margin-left: var(--cage-gaps);
+.cards .description {
+  padding: 20px 24px;
+}
+
+.description .example {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4px;
+}
