@@ -14,6 +14,8 @@
   --bcg-color: #2f303a;
   --logo-last-part1-color: #000000;
   --logo-last-part2-color: #ffffff;
+
+  --cage-gaps: 30px;
 }
 
 body {
@@ -41,21 +43,22 @@ body {
   left: -9999px;
 }
 
-/* добавляет нижний отступ для хедера в портфолио */
+/* добавляет нижний отступ для хедера в портфолио
 .bottom-margin {
   margin-bottom: 94px;
-}
+} */
 
 /* убирает нижний зазор у картинок с тегом img */
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 /* универсальный контейнер */
 
 .container {
-  width: 1230px;
+  width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
   margin-left: auto;
@@ -192,22 +195,22 @@ img {
 }
 
 .hero > .container {
-  margin-bottom: 94px;
   padding-top: 200px;
   padding-bottom: 200px;
 
   text-align: center;
-
-  /* background-color: lightgreen; */
 }
 
 /* оформление секций */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
-.section > .container {
+/* .section > .container {
   margin-bottom: 94px;
 
-  background-color: lightpink;
-}
+} */
 
 .title {
   margin-top: 0;
@@ -233,15 +236,15 @@ img {
 /* Сетка для блока Наши преимущества */
 .advantagies-list {
   display: flex;
-  margin-top: -30px;
-  margin-left: -30px;
+  margin-top: var(-1 * (--cage-gaps));
+  margin-left: var(-1 * (--cage-gaps));
   padding: 0;
 }
 
 .items {
-  flex-basis: calc((100% - 45px) / 4);
-  margin-top: 30px;
-  margin-left: 30px;
+  flex-basis: calc((100% - var(--cage-gaps)) / 4);
+  margin-top: var(--cage-gaps);
+  margin-left: var(--cage-gaps);
 
   /* outline: 1px solid darkblue; */
 }
@@ -280,10 +283,67 @@ img {
   line-height: 1.19;
 }
 
-/* What we do */
+/* Оформление секции Что мы делаем*/
 
 .container > .section-title {
   margin-bottom: 50px;
+}
+
+.container .examples {
+  display: flex;
+}
+
+.examples .pics {
+  flex-basis: calc((100% - 60px) / 3);
+  margin-top: var(-1 * (--cage-gaps));
+  margin-left: var(-1 * (--cage-gaps));
+}
+
+.pics {
+  margin-top: var(--cage-gaps);
+  margin-left: var(--cage-gaps);
+}
+
+/* Оформление секции Наша команда */
+
+/* Сетка для секции Наша команда */
+
+.team-list {
+  display: flex;
+  margin-top: var(-1 * (--cage-gaps));
+  margin-left: var(-1 * (--cage-gaps));
+  padding: 0;
+}
+
+.team-thumb {
+  flex-basis: calc((100% - var(--cage-gaps)) / 4);
+  margin-top: var(--cage-gaps);
+  margin-left: var(--cage-gaps);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
+}
+
+.team-thumb .title {
+  margin-bottom: 10px;
+}
+
+/* Обертка для заголовка и текста под фото команды */
+
+.team-thumb .content {
+  padding-top: 30px;
+  padding-right: 58px;
+  padding-bottom: 30px;
+  padding-left: 53px;
+
+  text-align: center;
+}
+
+.content .text {
+  margin: 0;
+  padding: 0;
 }
 
 /* Оформление адреса в футуре  */
@@ -302,6 +362,15 @@ img {
   margin-bottom: 20px;
 }
 
+
+.footer-info .geo-link {
+  font-size: 14px;
+  line-height: 1.71;
+  text-decoration: none;
+
+  color: var(--secondary-text-color);
+}
+
 .footer-info .link {
   font-weight: 500;
   font-size: 14px;
@@ -317,19 +386,11 @@ img {
   color: var(--secondary-text-color);
 }
 
-.footer-info .geo-link {
-  font-size: 14px;
-  line-height: 1.71;
-  text-decoration: none;
-
-  color: var(--secondary-text-color);
-}
-
 /* Оформление кнопки для Hero*/
 
 .hero .button {
   display: inline-block;
-  min-width: 200px;
+  min-width: auto;
 
   padding-top: 10px;
   padding-left: 32px;
@@ -349,11 +410,6 @@ img {
 }
 
 /* Оформление страницы Portfolio */
-
-.filtr {
-  margin-bottom: 50px;
-  background-color: magenta;
-}
 
 /* Офорляем секции в main */
 
@@ -379,20 +435,19 @@ img {
 /* оформление кнопок в main страницы Portfolio */
 
 .submenu .submenu-button {
-  padding-top: 6px;
-  padding-right: 22px;
-  padding-bottom: 6px;
-  padding-left: 6px;
-
-  border: 1px solid #f5f4fa;
-  border-radius: 4px;
+ padding: 6px 22px;
+ min-width:73px;
 
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  text-align: center;
   letter-spacing: 0.03em;
+
+  border: transparent;
+  border-radius: 4px;
+  border-color: #f5f4fa;
+  
 
   color: var(--headings-color);
   background-color: #f5f4fa;
@@ -405,12 +460,46 @@ img {
   border-color: var(--primary-color) solid transparent;
   cursor: pointer;
 
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  /* box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+  border-radius: 4px; */
 }
 
 .submenu .submenu-button.current {
   color: var(--secondary-text-color);
   background-color: var(--primary-color);
 }
+
+/* Позиционирование фильтра на странице Portfolio */
+.submenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  
+  /* background-color: magenta; */
+}
+
+.submenu .filter { 
+  padding-right: 8px;
+}
+
+.filter:last-child {
+  padding-right: 0;
+}
+
+
+
+/* Сетка для портфолио с примерами работ */
+
+.projects {
+  display: flex;
+  margin-top: var(-1 * (--cage-gaps));
+  margin-left: var(-1 * (--cage-gaps));
+  padding: 0;
+}
+
+.items {
+  flex-basis: calc((100% - var(--cage-gaps)) / 4);
+  margin-top: var(--cage-gaps);
+  margin-left: var(--cage-gaps);
