@@ -252,6 +252,11 @@ body {
 
 /* Оформление страницы Portfolio */
 
+.filtr {
+  margin-bottom: 50px;
+  background-color: magenta;
+}
+
 /* Офорляем секции в main */
 
 .projects .example {
