@@ -34,6 +34,13 @@ body {
   list-style: none;
 }
 
+/* скрывает заголовок */
+.hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
 /* добавляет нижний отступ для хедера в портфолио */
 .bottom-margin {
   margin-bottom: 94px;
@@ -48,7 +55,7 @@ img {
 /* универсальный контейнер */
 
 .container {
-  width: 1200px;
+  width: 1230px;
   padding-right: 15px;
   padding-left: 15px;
   margin-left: auto;
@@ -203,7 +210,11 @@ img {
 }
 
 .title {
-  margin: 0 0 10px 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+
   padding: 0;
 }
 
@@ -219,10 +230,27 @@ img {
   color: var(--headings-color);
 }
 
-/* What we do */
+/* Сетка для блока Наши преимущества */
+.advantagies-list {
+  display: flex;
+  margin-top: -30px;
+  margin-left: -30px;
+  padding: 0;
+}
 
-.container > .section-title {
-  margin-bottom: 50px;
+.items {
+  flex-basis: calc((100% - 45px) / 4);
+  margin-top: 30px;
+  margin-left: 30px;
+
+  /* outline: 1px solid darkblue; */
+}
+
+.items .text {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.71;
 }
 
 .advantagies-list .title {
@@ -250,6 +278,12 @@ img {
 .team-list .text {
   font-size: 16px;
   line-height: 1.19;
+}
+
+/* What we do */
+
+.container > .section-title {
+  margin-bottom: 50px;
 }
 
 /* Оформление адреса в футуре  */
