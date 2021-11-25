@@ -185,7 +185,6 @@ img {
 /* Оформляем Hero */
 
 .hero {
-  height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
 
@@ -424,6 +423,7 @@ img {
   font-size: 14px;
   line-height: 1.14;
   text-decoration: none;
+  font-style: normal;
 
   color: var(--primary-text-color);
 }
@@ -449,6 +449,7 @@ img {
   font-family: inherit;
   text-align: center;
 
+  border: none;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 
